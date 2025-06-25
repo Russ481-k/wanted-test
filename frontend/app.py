@@ -20,7 +20,10 @@ def get_response_from_backend(history: list):
 # --- Streamlit UI ---
 
 st.set_page_config(page_title="VIBE-CHATTING", page_icon="💬")
-st.title("VIBE-CHATTING 💬")
+st.title("W2-1: AI 기반 상품 최저가 검색 챗봇")
+
+# 테스트용 주석 추가
+# PR 테스트를 위한 주석입니다.
 
 # 세션 상태에 메시지 기록 초기화
 if "messages" not in st.session_state:
