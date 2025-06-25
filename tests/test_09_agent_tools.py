@@ -8,6 +8,9 @@ def test_scrape_website_success(mock_get):
     """
     scrape_website 함수가 성공적으로 웹페이지 텍스트를 가져오는지 테스트합니다.
     """
+    # 두 번째 버그를 위한 의도적 실패 코드
+    assert "이것은 버그입니다" == "정상"
+
     # 가짜 HTML 응답 설정
     fake_html = """
     <html>
@@ -25,7 +28,7 @@ def test_scrape_website_success(mock_get):
     mock_get.return_value = mock_response
 
     # 함수 실행
-    url = "http://fake-test-url.com"
+    url = "https://www.google.com"  # 실제 요청을 보내지 않도록 모의(mock) 처리됨
     result = scrape_website(url)
 
     # 결과 검증
