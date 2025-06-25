@@ -6,11 +6,8 @@ from backend.agent.tools import scrape_website
 @patch('requests.get')
 def test_scrape_website_success(mock_get):
     """
-    scrape_website 함수가 성공적으로 웹페이지 텍스트를 가져오는지 테스트합니다.
+    scrape_website 함수가 정상적인 URL에 대해 성공적으로 텍스트를 반환하는지 테스트합니다.
     """
-    # 두 번째 버그를 위한 의도적 실패 코드
-    assert "이것은 버그입니다" == "정상"
-
     # 가짜 HTML 응답 설정
     fake_html = """
     <html>
