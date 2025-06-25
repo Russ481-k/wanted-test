@@ -23,6 +23,9 @@ def test_chat_endpoint():
 
 def test_chat_endpoint_with_agent():
     """/chat 엔드포인트가 에이전트와 연동하여 정상적으로 응답하는지 테스트합니다."""
+    # 의도적인 버그 삽입
+    assert 1 == 2, "의도적으로 실패하는 테스트 버그"
+
     # ChatRequest 모델에 맞는 형식으로 요청 데이터를 수정합니다.
     request_data = {
         "messages": [
