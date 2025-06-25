@@ -1,0 +1,30 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# TASK-001: 프로젝트 구조 및 환경 설정
+
+## 구현 항목
+- `backend`, `frontend` 폴더 구조 생성
+- Python 3.11 가상 환경 설정
+- `backend`, `frontend` 별 의존성 관리를 위한 `requirements.txt` 파일 생성
+
+## 기술 스택 및 라이브러리
+- **언어**: Python
+- **프레임워크**: FastAPI, Streamlit
+- **서버**: uvicorn
+- **의존성 관리**: pip, requirements.txt
+- **환경 변수**: python-dotenv
+
+## 개발 계획
+1. `backend`, `frontend` 폴더 생성
+2. Python 3.11 기반 가상환경 `.venv` 생성 및 활성화
+3. `backend/requirements.txt` 파일 생성
+4. `backend/requirements.txt`에 `fastapi`, `uvicorn`, `python-dotenv` 추가
+5. `frontend/requirements.txt` 파일 생성
+6. `frontend/requirements.txt`에 `streamlit` 추가
+7. 루트 경로에 `.env` 파일 생성 및 `LANGSMITH_API_KEY` 등 기본 환경 변수 설정
+8. 각 폴더에 의존성 설치
+
+

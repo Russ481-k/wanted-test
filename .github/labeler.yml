@@ -1,0 +1,23 @@
+# .github/labeler.yml
+
+# Backend 관련 파일 변경 시 'Backend' 라벨 추가
+Backend:
+  - "backend/**/*"
+
+# Frontend 관련 파일 변경 시 'Frontend' 라벨 추가
+Frontend:
+  - "frontend/**/*"
+
+# 테스트 코드 변경 시 'Test' 라벨 추가
+Test:
+  - "tests/**/*"
+
+# 문서 변경 시 'Documentation' 라벨 추가
+Documentation:
+  - "docs/**/*"
+  - "**/*.md"
+  - "**/*.mdc"
+
+# GitHub Actions 워크플로우 변경 시 'CI/CD' 라벨 추가
+CI/CD:
+  - ".github/**/*"

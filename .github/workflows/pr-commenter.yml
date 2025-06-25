@@ -1,0 +1,33 @@
+name: PR Commenter
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on new PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `
+                PR을 생성해주셔서 감사합니다! 🚀
+
+                리뷰어들이 곧 코드를 살펴볼 예정입니다.
+                PR이 머지되기 전에 다음 사항을 확인해주세요:
+                - [ ] 모든 테스트를 통과했나요?
+                - [ ] PR 제목과 설명이 규칙에 맞게 작성되었나요?
+                - [ ] 관련된 이슈가 있다면 연결되었나요?
+
+                궁금한 점이 있다면 언제든지 코멘트를 남겨주세요!
+              `
+            })

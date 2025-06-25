@@ -1,0 +1,28 @@
+name: PR Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+  security-events: write
+
+jobs:
+  codacy-security-scan:
+    name: Codacy Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@v4
+        with:
+          # Codacy Project Token (저장소 설정 > Secrets 에 등록 필요)
+          # project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          # 특정 도구만 실행하려면 주석 해제 (예: bandit, checkstyle)
+          # tool: bandit
+          # 업로드할 최대 결과 수
+          max-results: 1000

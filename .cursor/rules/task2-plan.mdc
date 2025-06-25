@@ -1,0 +1,27 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# TASK-002: FastAPI 백엔드 기본 구조 구현
+
+## 구현 항목
+- FastAPI 애플리케이션 생성 및 기본 설정
+- 루트 엔드포인트 (`/`) 구현
+- 동기 방식의 Chat API (`/chat`) 스켈레톤 구현
+- API 요청/응답을 위한 데이터 모델(Pydantic) 정의
+
+## 기술 스택 및 라이브러리
+- **언어**: Python
+- **프레임워크**: FastAPI
+- **서버**: uvicorn
+- **데이터 모델링**: Pydantic
+
+## 개발 계획
+1. `backend/main.py` 파일 생성 및 FastAPI 앱 초기화
+2. 루트 경로 (`/`)에 "Hello World"를 반환하는 GET 엔드포인트 추가
+3. Chat API의 요청 바디를 위한 Pydantic 모델 `(ChatMessage)` 정의
+4. Chat API의 응답을 위한 Pydantic 모델 `(ChatResponse)` 정의
+5. `/chat` 경로에 동기식 POST 엔드포인트 구현 (요청을 받아 간단한 응답 반환)
+6. `uvicorn`을 사용하여 로컬에서 서버 실행 및 API 동작 확인
+

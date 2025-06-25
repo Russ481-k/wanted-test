@@ -1,0 +1,35 @@
+# .github/issue-labeler.yml
+
+# 'bug' 라벨: 이슈의 제목 또는 본문에 'bug', 'error', 'fail' 등의 키워드가 포함된 경우
+bug:
+  - "bug"
+  - "error"
+  - "fail"
+  - "버그"
+  - "오류"
+  - "에러"
+
+# 'question' 라벨: 'question', 'help', 'ask', '질문' 등의 키워드가 포함된 경우
+question:
+  - "question"
+  - "help"
+  - "ask"
+  - "질문"
+  - "도움"
+  - "문의"
+
+# 'enhancement' 라벨: 'enhancement', 'feature', 'improvement', '기능', '개선' 등의 키워드가 포함된 경우
+enhancement:
+  - "enhancement"
+  - "feature"
+  - "improvement"
+  - "기능"
+  - "개선"
+  - "제안"
+
+# 'documentation' 라벨: 'documentation', 'docs', '문서' 등의 키워드가 포함된 경우
+documentation:
+  - "documentation"
+  - "docs"
+  - "문서"
+  - "가이드"

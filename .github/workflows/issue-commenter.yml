@@ -1,0 +1,28 @@
+name: Issue Commenter
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on new issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `
+                이슈를 등록해주셔서 감사합니다! 🙏
+                
+                담당자가 곧 내용을 확인하고 답변을 드릴 예정입니다.
+                추가 정보가 있다면 언제든지 코멘트를 남겨주세요.
+              `
+            })

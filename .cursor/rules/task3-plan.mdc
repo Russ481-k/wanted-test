@@ -1,0 +1,29 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# TASK-003: LangGraph Agent 구현
+
+## 구현 항목
+- LangGraph를 사용한 ReAct 에이전트 기본 구조 구현
+- Google Gemini LLM 연동
+- LangChain의 DuckDuckGo Search Tool 연동
+- 에이전트가 도구를 사용하여 웹 검색을 수행하고, LLM을 통해 최종 응답을 생성하는 로직 구현 (메모리 없는 단일 대화)
+
+## 기술 스택 및 라이브러리
+- **언어**: Python
+- **에이전트 프레임워크**: LangGraph
+- **LLM**: Google Gemini (`langchain-google-genai`)
+- **도구**: DuckDuckGo Search (`langchain-community`)
+- **핵심 라이브러리**: `langgraph`, `langchain-core`, `langchain-google-genai`, `langchain-community`
+
+## 개발 계획
+1. `backend/agent` 폴더 및 `__init__.py`, `agent.py` 파일 생성
+2. `backend/requirements.txt`에 `langgraph`, `langchain-google-genai`, `langchain-community`, `duckduckgo-search` 추가 및 설치
+3. `agent.py`에 DuckDuckGo Search 도구 정의
+4. `agent.py`에 Google Gemini 모델 초기화
+5. `langgraph.prebuilt`의 `create_react_agent`를 사용하여 모델과 도구를 연결한 에이전트 생성
+6. 생성된 에이전트를 `FastAPI`의 `/chat` 엔드포인트와 연동
+7. 사용자의 메시지를 받아 에이전트를 실행하고, 도구 실행 결과와 최종 LLM 응답을 반환하는 기능 구현
+
